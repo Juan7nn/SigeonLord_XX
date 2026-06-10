@@ -1,0 +1,88 @@
+
+:root{
+	--bg:#e0ecff;
+	--muted:#black;
+	--primary:#4c5269;
+}
+
+*{box-sizing:border-box}
+body{
+	margin:0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background:var(--bg);
+	color:#111827;
+}
+
+.navbar-brand{font-weight:700}
+.lead{font-size:1.05rem}
+
+/* Card tweaks */
+.card{border-radius:12px}
+
+/* Project images: make project thumbnails uniform */
+.card-body img{
+	width:100%;
+	max-width:360px;
+	height:220px;
+	object-fit:cover;
+	display:block;
+	margin:0 auto 1rem;
+	border-radius:8px;
+}
+
+/* Footer */
+.bg-light{background:#fbfbfd !important}
+
+/* Small helpers */
+.text-muted{color:var(--muted) !important}
+
+/* SVG background positioning */
+main{position:relative}
+.bg-wave{position:absolute;left:50%;top:0;transform:translateX(-50%);width:100vw;height:auto;z-index:0;pointer-events:none}
+#hero{position:relative;z-index:1}
+.text-center.mb-4{position:relative;z-index:1}
+
+/* Make header/navbar stick to top while scrolling (no HTML changes) */
+header{
+  position:sticky;
+  top:0;
+  z-index:1050;
+  background: #4c5269;
+}
+/* small shadow to separate from content when sticky */
+header.stuck, header{
+	box-shadow: 0 2px 6px rgba(16,24,40,0.06);
+}
+
+/* Navbar color adjustments */
+header .navbar-brand,
+header .nav-link{
+	color: #ffffff !important;
+}
+header .nav-link:hover{
+	color: #e6e6e6 !important;
+}
+/* Toggler (mobile) - make icon visible on dark bg */
+.navbar-toggler{
+	border-color: rgba(255,255,255,0.15);
+}
+.navbar-toggler-icon{
+	filter: invert(1) brightness(2);
+}
+
+/* Center entire page content */
+body{
+    text-align:center;
+}
+
+/* Ensure Bootstrap rows center their columns */
+.row{justify-content:center}
+
+/* Make cards and other block elements centered */
+.card{margin-left:auto;margin-right:auto}
+.container{align-items:center}
+
+/* Ensure main sections use centered text */
+main, main section{display:block;text-align:center}
+
+
